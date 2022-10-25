@@ -5,6 +5,10 @@ from itsdangerous import Serializer
 from demoapp.forms import CreateUserForm
 from django.contrib.auth.forms import UserCreationForm
 
+@login_required(login_url='login')
+def home(request):
+       return render(request, 'home.html')   
+
 #Authentication 
 def loginpage(request):
     if request.user.is_authenticated:
