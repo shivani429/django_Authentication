@@ -3,6 +3,7 @@ from django.http import HttpResponse, JsonResponse
 from django.http import HttpResponseRedirect
 from itsdangerous import Serializer
 from demoapp.forms import CreateUserForm
+from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
 
 @login_required(login_url='login')
